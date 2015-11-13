@@ -1,0 +1,46 @@
+{
+	"eventName": "Andy torture",
+	"leadPerformer": "Andy Akhio",
+	"grids": [
+		{
+			"id": "1",
+			"beaconId": "someuuid",
+			"streamURL": "someurl"
+		},
+		{
+			"id": "1",
+			"beaconId": "someuuid",
+			"streamURL": "someurl"
+		},
+		{
+			"id": "1",
+			"beaconId": "someuuid",
+			"streamURL": "someurl"
+		},
+		{
+			"id": "1",
+			"beaconId": "someuuid",
+			"streamURL": "someurl"
+		},
+		{
+			"id": "1",
+			"beaconId": "someuuid",
+			"streamURL": "someurl"
+		},
+		{
+			"id": "1",
+			"beaconId": "someuuid",
+			"streamURL": "someurl"
+		},
+		{
+			"id": "1",
+			"beaconId": "someuuid",
+			"streamURL": "someurl"
+		},
+		{
+			"id": "1",
+			"beaconId": "someuuid",
+			"streamURL": "someurl"
+		}
+	]
+}
