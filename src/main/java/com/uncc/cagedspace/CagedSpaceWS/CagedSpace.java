@@ -1,5 +1,6 @@
 package com.uncc.cagedspace.CagedSpaceWS;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "leadPerformer",
         "grids"
 })
-public class CagedSpace {
+public class CagedSpace implements Serializable {
 
     @JsonProperty("eventName")
     private String eventName;
@@ -29,8 +30,7 @@ public class CagedSpace {
     private String leadPerformer;
     @JsonProperty("grids")
     private List<Grid> grids = new ArrayList<Grid>();
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+  
 
     /**
      *
@@ -82,7 +82,13 @@ public class CagedSpace {
         return grids;
     }
 
-    /**
+    @Override
+	public String toString() {
+		return "CagedSpace [eventName=" + eventName + ", leadPerformer="
+				+ leadPerformer + ", grids=" + grids + "]";
+	}
+
+	/**
      *
      * @param grids
      * The grids
@@ -92,15 +98,7 @@ public class CagedSpace {
         this.grids = grids;
     }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
 
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 
 }
 

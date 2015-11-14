@@ -18,6 +18,7 @@ public class CagedSpaceUtil {
         try {
 
             cs = mapper.readValue(new File(CagedSpaceUtil.class.getClassLoader().getResource("cagedspace.json").getFile()), CagedSpace.class);
+            
         } catch (IOException e) {
             e.printStackTrace();
         }

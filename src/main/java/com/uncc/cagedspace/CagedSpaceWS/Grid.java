@@ -3,6 +3,8 @@ package com.uncc.cagedspace.CagedSpaceWS;
 import com.fasterxml.jackson.annotation.*;
 
 import javax.annotation.Generated;
+
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,16 +15,15 @@ import java.util.Map;
         "beaconId",
         "streamURL"
 })
-public class Grid {
+public class Grid implements Serializable {
 
     @JsonProperty("id")
-    private String id;
+    private long id;
     @JsonProperty("beaconId")
     private String beaconId;
     @JsonProperty("streamURL")
     private String streamURL;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    
 
     /**
      *
@@ -30,17 +31,23 @@ public class Grid {
      * The id
      */
     @JsonProperty("id")
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    /**
+    @Override
+	public String toString() {
+		return "Grid [id=" + id + ", beaconId=" + beaconId + ", streamURL="
+				+ streamURL + "]";
+	}
+
+	/**
      *
      * @param id
      * The id
      */
     @JsonProperty("id")
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -84,14 +91,6 @@ public class Grid {
         this.streamURL = streamURL;
     }
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
 
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
 
 }
