@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -22,7 +23,7 @@ import com.uncc.cagedspace.CagedSpaceWS.Grid;
 @Path("/grids")
 public class CagedSpaceService {
 	ObjectMapper mapper = new ObjectMapper();
-	//ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
+	// ObjectWriter writer = mapper.writer(new DefaultPrettyPrinter());
 	CagedSpace cs = CagedSpaceUtil.getJSONData();
 
 	@GET
@@ -34,8 +35,9 @@ public class CagedSpaceService {
 
 	@PUT
 	@Path("/{gridId}")
-	//@Produces(MediaType.APPLICATION_JSON)
-	public void updateGrid(@PathParam("gridId") long id, Grid grid) {
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Grid> updateGrid(@PathParam("gridId") long id, Grid grid) {
 		grid.setId(id);
 		// return messageService.updateMessage(message);
 
@@ -50,15 +52,58 @@ public class CagedSpaceService {
 		System.out.println("*****" + cs.toString());
 		// //update grid in json file
 		try {
-//			mapper.writeValue(new File(this.getClass().getClassLoader()
-//					.getResource("cagedspace.json").getFile()), cs);
-			mapper.writeValue(new File("F:/learnings_Workspace/CagedSpaceWS/src/main/resources/cagedspace.json"), cs);
+			// mapper.writeValue(new File(this.getClass().getClassLoader()
+			// .getResource("cagedspace.json").getFile()), cs);
+			mapper.writeValue(
+					new File(
+							"F:/learnings_Workspace/CagedSpaceWS/src/main/resources/cagedspace.json"),
+					cs);
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		//return CagedSpaceUtil.getJSONData().getGrids();
+
+		return CagedSpaceUtil.getJSONData().getGrids();
+
+	}
+
+	@PUT
+	@Path("/update")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Grid> updateGrids(List<Grid> gridUpdated) {
+		// grid.setId(id);
+		// return messageService.updateMessage(message);
+
+		System.out.println("***********8" + gridUpdated.toString());
+		List<Grid> grids = cs.getGrids();
+
+		for (Grid tempg : gridUpdated) {
+			for (int i = 0; i < grids.size(); i++) {
+				if (grids.get(i).getId() == tempg.getId()) {
+					grids.set(i, tempg);
+					break;
+				}
+			}
+
+		}
+		System.out.println("*****" + cs.toString());
+		// //update grid in json file
+		try {
+			// mapper.writeValue(new File(this.getClass().getClassLoader()
+			// .getResource("cagedspace.json").getFile()), cs);
+			mapper.writeValue(
+					new File(
+							"F:/learnings_Workspace/CagedSpaceWS/src/main/resources/cagedspace.json"),
+					cs);
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return CagedSpaceUtil.getJSONData().getGrids();
 
 	}
 
