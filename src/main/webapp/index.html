@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>CagedSpace</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<div class="container" style="background-color:yellow">
+		<div class="row">
+			<div class="openBeaconModal col-md-4" data-id="1"><a href="#" data-toggle="modal" data-target="#myModal" ><img src="images/grey.png" alt="Just an Image"/></a></div>
+			<div class="openBeaconModal col-md-4" data-id="2"><a href="#" data-toggle="modal" data-target="#myModal" ><img src="images/grey.png" alt="Just an Image"/></a></div>
+			<div class="openBeaconModal col-md-4" data-id="3"><a href="#" data-toggle="modal" data-target="#myModal" ><img src="images/grey.png" alt="Just an Image"/></a></div>
+		</div>
+		<div class="row">
+			<div class="openBeaconModal col-md-4" data-id="4"><a href="#" data-toggle="modal" data-target="#myModal" ><img src="images/grey.png" alt="Just an Image"/></a></div>
+			<div class="openBeaconModal col-md-4" data-id="5"><a href="#" data-toggle="modal" data-target="#myModal" ><img src="images/grey.png" alt="Just an Image"/></a></div>
+			<div class="openBeaconModal col-md-4" data-id="6"><a href="#" data-toggle="modal" data-target="#myModal" ><img src="images/grey.png" alt="Just an Image"/></a></div>
+		</div>
+		<div class="row">
+			<div class="openBeaconModal col-md-4" data-id="7"><a href="#" data-toggle="modal" data-target="#myModal" ><img src="images/grey.png" alt="Just an Image"/></a></div>
+			<div class="openBeaconModal col-md-4" data-id="8"><a href="#" data-toggle="modal" data-target="#myModal" ><img src="images/grey.png" alt="Just an Image"/></a></div>
+			<div class="openBeaconModal col-md-4" data-id="9"><a href="#" data-toggle="modal" data-target="#myModal" ><img src="images/grey.png" alt="Just an Image"/></a></div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal">&times;</button>
+
+					<h4 class="modal-title">Enter beacon details for Grid <span id="gridId"></span></h4>
+				</div><!-- end modal-header -->
+				<div class="modal-body">
+					<form class="form-horizontal" id="modalForm">
+						<div class="form-group">
+							<label class="col-lg-2 control-label" for="beaconId">Beacon ID</label>
+							<div class="col-lg-10">
+								<input class="form-control" id="beaconId" placeholder="Name" type="text">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-lg-2 control-label" for="streamUrl">Stream URL</label>
+							<div class="col-lg-10">
+								<input class="form-control" id="streamUrl" placeholder="Email" type="email">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-lg-10">
+								<input class="form-control" id="hiddenGridId" placeholder="Email" type="hidden">
+							</div>
+						</div>
+						<div class="form-group">
+							<input type="submit" class="btn btn-success pull-right" value="Save" />
+						</div>
+
+					</form>
+
+				</div><!-- end modal-body -->
+
+			</div><!-- end modal-content -->
+		</div><!-- end modal-dialog -->
+	</div><!-- end myModal -->
+</div>
+
+<script type="text/javascript">
+	window.onload = function() {
+		console.log("Activating binder");
+
+		$(document).on("click", ".openBeaconModal", function () {
+			var gridId = $(this).attr("data-id");
+			$(".modal-header #gridId").html(gridId);
+			$("#hiddenGridId").val(gridId);
+
+			$('#myModal').on('shown.bs.modal', function () {
+				console.log("Modal activated");
+				document.getElementById("modalForm").onsubmit = function() {
+					console.log("Form submitted");
+					var beaconId = $("#beaconId").val();
+					var streamUrl = $("#streamUrl").val();
+					var gridId = $("#hiddenGridId").val();
+					var postJson = {
+						"beaconId" : beaconId,
+						"streamUrl" : streamUrl,
+						"gridId": gridId
+					};
+					$("#myModal").modal('hide');
+					console.log(postJson);
+
+				};
+			});
+		});
+
+	};
+
+</script>
+</body>
+</html>
