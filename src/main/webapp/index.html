@@ -53,7 +53,7 @@
 						<div class="form-group">
 							<label class="col-lg-2 control-label" for="streamUrl">Stream URL</label>
 							<div class="col-lg-10">
-								<input class="form-control" id="streamUrl" placeholder="Email" type="email">
+								<input class="form-control" id="streamUrl" type="text">
 							</div>
 						</div>
 
@@ -115,6 +115,13 @@
 						"gridId": gridId
 					};
 					$("#myModal").modal('hide');
+
+					$.ajax({  
+				       type: "PUT",  
+				       url: "http://52.26.164.148:8080/CagedSpaceWS/rest/grids/"+gridId,  
+				       dataType: "json", 
+				       data: JSON.stringify(postJson)
+				     });
 					console.log(postJson);
 
 				};
