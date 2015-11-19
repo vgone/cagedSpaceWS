@@ -84,6 +84,23 @@
 			$(".modal-header #gridId").html(gridId);
 			$("#hiddenGridId").val(gridId);
 
+			// fetch rest start
+
+				$.ajax({  
+			       type: "GET",  
+			       url: "http://52.26.164.148:8080/CagedSpaceWS/rest/grids/"+gridId,  
+			       dataType: "json",  
+			       success: function(resp){  
+			           
+			         console.log(resp);  
+			       },  
+			       error: function(e){  
+			         console.log('Error in fetching json');
+			       }  
+			     });
+
+				// fetch rest end
+
 			$('#myModal').on('shown.bs.modal', function () {
 				console.log("Modal activated");
 				document.getElementById("modalForm").onsubmit = function() {

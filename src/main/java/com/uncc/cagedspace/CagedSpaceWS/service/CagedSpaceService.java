@@ -41,9 +41,9 @@ public class CagedSpaceService {
 		
 		for(Grid tempGrid:grids){
 			
-			if(tempGrid.getId()==id)
+			if(tempGrid.getId()==id) {
 				return tempGrid;
-			break;
+			}
 		}
 		return null;
 
