@@ -88,7 +88,7 @@
 
 				$.ajax({  
 			       type: "GET",  
-			       url: "http://52.26.164.148:8080/CagedSpaceWS/rest/grids/"+gridId,  
+			       url: "http://localhost:8081/CagedSpaceWS/rest/grids/"+gridId,  
 			       dataType: "json",  
 			       success: function(resp){  
 			         console.log(resp);  
@@ -112,17 +112,20 @@
 					var postJson = {
 						"beaconId" : beaconId,
 						"streamUrl" : streamUrl,
-						"gridId": gridId
+						"id": gridId
 					};
 					$("#myModal").modal('hide');
 
 					$.ajax({  
 				       type: "PUT",  
-				       url: "http://52.26.164.148:8080/CagedSpaceWS/rest/grids/"+gridId,  
-				       dataType: "json", 
-				       data: JSON.stringify(postJson)
+				       url: "http://localhost:8081/CagedSpaceWS/rest/grids/"+gridId,  
+				       contentType: "application/json", 
+				       data: JSON.stringify(postJson),
+				       success:function(result){
+				    	   console.log(result);
+				       }
 				     });
-					console.log(postJson);
+					
 
 				};
 			});
