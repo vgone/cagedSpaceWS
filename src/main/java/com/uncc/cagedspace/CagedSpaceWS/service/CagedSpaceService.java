@@ -56,7 +56,7 @@ public class CagedSpaceService {
 			// .getResource("cagedspace.json").getFile()), cs);
 			mapper.writeValue(
 					new File(
-							"F:/learnings_Workspace/CagedSpaceWS/src/main/resources/cagedspace.json"),
+							"/home/ubuntu/cagedspace.json"),
 					cs);
 
 		} catch (IOException e) {
