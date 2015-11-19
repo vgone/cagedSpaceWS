@@ -23,13 +23,20 @@ public class CagedSpaceUtil {
 //					CagedSpace.class);
 
 			cs = mapper.readValue(
-					new File("F:/learnings_Workspace/CagedSpaceWS/src/main/resources/cagedspace.json"),
+					new File(getFileName()),
 			CagedSpace.class);
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return cs;
+	}
+	public static String getFileName(){
+		String csLocation = System.getenv("CAGEDSPACE_JSON");
+		if(csLocation == null) {
+			csLocation = "F:\\learnings_Workspace\\CagedSpaceWS\\src\\main\\resources\\cagedspace.json";
+		}
+		return csLocation;
 	}
 
 }

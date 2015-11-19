@@ -12,6 +12,11 @@ public class CagedSpaceUtilTest {
         CagedSpace jsonData = CagedSpaceUtil.getJSONData();
         System.out.println(jsonData.getEventName());
     }
+    
+    @Test
+    public void testFileName(){
+    	System.out.println(CagedSpaceUtil.getFileName());
+    }
 
 
 }

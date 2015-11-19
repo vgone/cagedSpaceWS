@@ -32,6 +32,23 @@ public class CagedSpaceService {
 		return cs.getGrids();
 
 	}
+	
+	@GET
+	@Path("/{gridId}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Grid getGrid(@PathParam("gridId") long id) {
+		List<Grid> grids = cs.getGrids();
+		
+		for(Grid tempGrid:grids){
+			
+			if(tempGrid.getId()==id)
+				return tempGrid;
+			break;
+		}
+		return null;
+
+	}
+	
 
 	@PUT
 	@Path("/{gridId}")
@@ -56,7 +73,7 @@ public class CagedSpaceService {
 			// .getResource("cagedspace.json").getFile()), cs);
 			mapper.writeValue(
 					new File(
-							"/home/ubuntu/cagedspace.json"),
+							CagedSpaceUtil.getFileName()),
 					cs);
 
 		} catch (IOException e) {
@@ -95,7 +112,7 @@ public class CagedSpaceService {
 			// .getResource("cagedspace.json").getFile()), cs);
 			mapper.writeValue(
 					new File(
-							"F:/learnings_Workspace/CagedSpaceWS/src/main/resources/cagedspace.json"),
+							CagedSpaceUtil.getFileName()),
 					cs);
 
 		} catch (IOException e) {
