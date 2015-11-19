@@ -91,8 +91,9 @@
 			       url: "http://52.26.164.148:8080/CagedSpaceWS/rest/grids/"+gridId,  
 			       dataType: "json",  
 			       success: function(resp){  
-			           
 			         console.log(resp);  
+			         $("#beaconId").val(resp.beaconId);
+					 $("#streamUrl").val(resp.streamURL);
 			       },  
 			       error: function(e){  
 			         console.log('Error in fetching json');
