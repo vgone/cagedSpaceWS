@@ -11,14 +11,15 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.ResponseBuilder;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.ObjectWriter;
 import org.codehaus.jackson.util.DefaultPrettyPrinter;
 
-import com.uncc.cagedspace.CagedSpaceWS.CagedSpace;
 import com.uncc.cagedspace.CagedSpaceWS.CagedSpaceUtil;
-import com.uncc.cagedspace.CagedSpaceWS.Grid;
+import com.uncc.cagedspace.CagedSpaceWS.pojo.*;;
 
 @Path("/grids")
 public class CagedSpaceService {
@@ -29,6 +30,7 @@ public class CagedSpaceService {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Grid> getGrids() {
+		System.out.println("inside grids");
 		return cs.getGrids();
 
 	}
@@ -49,12 +51,26 @@ public class CagedSpaceService {
 
 	}
 	
+	@GET
+	@Path("/orchestra")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Orchestra> getOrchestraDetails() {
+		return cs.getOrchestra();
+	}
+	
+	@GET
+	@Path("/floorMap")
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getFloorMap() {
+		return cs.getFloorMap();
+	}
+	
 
 	@PUT
-	@Path("/{gridId}")
+	@Path("/grids/{gridId}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Grid> updateGrid(@PathParam("gridId") long id, Grid grid) {
+	public List<Grid> updateGrid(@PathParam("gridId") int id, Grid grid) {
 		grid.setId(id);
 		// return messageService.updateMessage(message);
 
@@ -86,7 +102,7 @@ public class CagedSpaceService {
 	}
 
 	@PUT
-	@Path("/update")
+	@Path("/grids/update")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Grid> updateGrids(List<Grid> gridUpdated) {

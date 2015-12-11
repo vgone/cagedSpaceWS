@@ -1,1 +1,58 @@
-{"eventName":"CagedSpace","leadPerformer":"Andy Akhio","grids":[{"id":1,"beaconId":"123123","streamURL":null},{"id":2,"beaconId":"255266","streamURL":"http://second beacon/stream"},{"id":3,"beaconId":"someuuid","streamURL":"someurl123"},{"id":4,"beaconId":"someuuid","streamURL":"someurl"},{"id":5,"beaconId":"someuuid","streamURL":"someurl"},{"id":6,"beaconId":"someuuid","streamURL":"someurl"},{"id":7,"beaconId":"someuuid","streamURL":"someurl"},{"id":8,"beaconId":"someuuid","streamURL":"someurl"},{"id":9,"beaconId":"someuuid","streamURL":"someurl"}]}
+{
+	"eventName": "CagedSpace",
+	"eventVenue": "Bechtler Museum of Modern Art, Charlotte",
+    
+    
+	"grids": [{
+		"id": 10,
+		"beaconId": "20256:28960",
+		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/01.mp3"
+	}, {
+		"id": 20,
+		"beaconId": "35131:24072",
+		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/02.mp3"	
+	}, {
+		"id": 30,
+		"beaconId": "34567:20852",
+		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/03.mp3"
+	}, {
+		"id": 40,
+		"beaconId": "57673:45085",
+		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/04.mp3"	
+	}, {
+		"id": 50,
+		"beaconId": "16079:18304",
+		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/05.mp3"
+	}, {
+		"id": 60,
+		"beaconId": "44642:44519",
+		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/06.mp3"
+	}],
+    "floorMap":"http://10.38.49.132:8081/CagedSpaceWS/images/floorMap.jpg",
+    "orchestra":[
+        {
+        "playerName":"Andy Akiho",
+        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player1_Avatar.jpg"},
+         {
+        "playerName":"Jennifer",
+        "playerCaption":"We're musicians. We make music for a living. It's that simple. Nothing else matters",
+        "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player2_Avatar.png"},
+         {
+        "playerName":"Andy Akiho",
+        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player1_Avatar.jpg"},
+                         {
+        "playerName":"Jennifer",
+        "playerCaption":"We're musicians. We make music for a living. It's that simple. Nothing else matters",
+        "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player2_Avatar.png"},
+        {
+        "playerName":"Andy Akiho",
+        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player1_Avatar.jpg"},
+                         {
+        "playerName":"Jennifer",
+        "playerCaption":"We're musicians. We make music for a living. It's that simple. Nothing else matters",
+        "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player2_Avatar.png"},
+                         {
+        "playerName":"Andy Akiho",
+        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player1_Avatar.jpg"}]
+    
+}

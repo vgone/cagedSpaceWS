@@ -3,6 +3,8 @@ package com.uncc.cagedspace.CagedSpaceWS;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.ObjectMapper;
 
+import com.uncc.cagedspace.CagedSpaceWS.pojo.CagedSpace;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
@@ -29,6 +31,7 @@ public class CagedSpaceUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println(cs.toString());
 		return cs;
 	}
 	public static String getFileName(){
