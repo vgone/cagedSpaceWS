@@ -15,7 +15,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
 "id",
 "beaconId",
-"streamURL"
+"streamURL",
+"gridImageURL"
 })
 public class Grid {
 
@@ -25,6 +26,8 @@ private Integer id;
 private String beaconId;
 @JsonProperty("streamURL")
 private String streamURL;
+@JsonProperty("gridImageURL")
+private String gridImageURL;
 @JsonIgnore
 private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -46,6 +49,25 @@ return id;
 @JsonProperty("id")
 public void setId(Integer id) {
 this.id = id;
+}
+/**
+* 
+* @return
+* The gridImageURL
+*/
+@JsonProperty("gridImageURL")
+public String getGridImageURL() {
+return gridImageURL;
+}
+
+/**
+* 
+* @param gridImageURL
+* The gridImageURL
+*/
+@JsonProperty("gridImageURL")
+public void setGridImageURL(String gridImageURL) {
+this.gridImageURL = gridImageURL;
 }
 
 /**

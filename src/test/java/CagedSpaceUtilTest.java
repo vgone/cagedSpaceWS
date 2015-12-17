@@ -1,4 +1,4 @@
-import com.uncc.cagedspace.CagedSpaceWS.CagedSpace;
+import com.uncc.cagedspace.CagedSpaceWS.pojo.*;
 import com.uncc.cagedspace.CagedSpaceWS.CagedSpaceUtil;
 import org.junit.Test;
 

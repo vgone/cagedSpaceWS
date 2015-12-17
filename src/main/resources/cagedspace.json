@@ -6,53 +6,59 @@
 	"grids": [{
 		"id": 10,
 		"beaconId": "20256:28960",
-		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/01.mp3"
+		"streamURL": "http://192.168.2.14:8081/CagedSpaceWS/songs/01.mp3",
+        "gridImageURL": "http://192.168.2.14:8081/CagedSpaceWS/images/floorMap.jpg"
 	}, {
 		"id": 20,
 		"beaconId": "35131:24072",
-		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/02.mp3"	
+		"streamURL": "http://192.168.2.14:8081/CagedSpaceWS/songs/02.mp3",
+        "gridImageURL": "http://192.168.2.14:8081/CagedSpaceWS/images/floorMap.jpg"
 	}, {
 		"id": 30,
 		"beaconId": "34567:20852",
-		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/03.mp3"
+		"streamURL": "http://192.168.2.14:8081/CagedSpaceWS/songs/03.mp3",
+        "gridImageURL": "http://192.168.2.14:8081/CagedSpaceWS/images/floorMap.jpg"
 	}, {
 		"id": 40,
 		"beaconId": "57673:45085",
-		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/04.mp3"	
+		"streamURL": "http://192.168.2.14:8081/CagedSpaceWS/songs/04.mp3",
+        "gridImageURL": "http://192.168.2.14:8081/CagedSpaceWS/images/floorMap.jpg"
 	}, {
 		"id": 50,
 		"beaconId": "16079:18304",
-		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/05.mp3"
+		"streamURL": "http://192.168.2.14:8081/CagedSpaceWS/songs/05.mp3",
+              "gridImageURL": "http://192.168.2.14:8081/CagedSpaceWS/images/floorMap.jpg"
 	}, {
 		"id": 60,
 		"beaconId": "44642:44519",
-		"streamURL": "http://10.38.49.132:8081/CagedSpaceWS/songs/06.mp3"
+		"streamURL": "http://192.168.2.14:8081/CagedSpaceWS/songs/06.mp3",
+              "gridImageURL": "http://192.168.2.14:8081/CagedSpaceWS/images/floorMap.jpg"
 	}],
-    "floorMap":"http://10.38.49.132:8081/CagedSpaceWS/images/floorMap.jpg",
+    "floorMap":"http://192.168.2.14:8081/CagedSpaceWS/images/floorMap.jpg",
     "orchestra":[
         {
         "playerName":"Andy Akiho",
-        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player1_Avatar.jpg"},
+        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://192.168.2.14:8081/CagedSpaceWS/images/Player1_Avatar.jpg"},
          {
         "playerName":"Jennifer",
         "playerCaption":"We're musicians. We make music for a living. It's that simple. Nothing else matters",
-        "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player2_Avatar.png"},
+        "playerPhoto":"http://192.168.2.14:8081/CagedSpaceWS/images/Player2_Avatar.png"},
          {
         "playerName":"Andy Akiho",
-        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player1_Avatar.jpg"},
+        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://192.168.2.14:8081/CagedSpaceWS/images/Player1_Avatar.jpg"},
                          {
         "playerName":"Jennifer",
         "playerCaption":"We're musicians. We make music for a living. It's that simple. Nothing else matters",
-        "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player2_Avatar.png"},
+        "playerPhoto":"http://192.168.2.14:8081/CagedSpaceWS/images/Player2_Avatar.png"},
         {
         "playerName":"Andy Akiho",
-        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player1_Avatar.jpg"},
+        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://192.168.2.14:8081/CagedSpaceWS/images/Player1_Avatar.jpg"},
                          {
         "playerName":"Jennifer",
         "playerCaption":"We're musicians. We make music for a living. It's that simple. Nothing else matters",
-        "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player2_Avatar.png"},
+        "playerPhoto":"http://192.168.2.14:8081/CagedSpaceWS/images/Player2_Avatar.png"},
                          {
         "playerName":"Andy Akiho",
-        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://10.38.49.132:8081/CagedSpaceWS/images/Player1_Avatar.jpg"}]
+        "playerCaption":"For most artists, you take what you have and who you are, and then you expand on it to make it more entertaining. Everyone knows actors aren't the same people that they play in movies, but people somehow expect musicians to be a certain way all the time!",              "playerPhoto":"http://192.168.2.14:8081/CagedSpaceWS/images/Player1_Avatar.jpg"}]
     
 }
